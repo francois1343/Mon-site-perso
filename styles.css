@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* ===== GLOBAL ===== */
+
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px;
+}
+
+/* ===== CV ===== */
+
+.cv-container {
+    background: #111827;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.cv-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.cv-container h2 {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.cv-section {
+    margin-bottom: 25px;
+    border-left: 2px solid #3b82f6;
+    padding-left: 15px;
+}
+
+.cv-section h3 {
+    margin-bottom: 10px;
+    color: #3b82f6;
+    font-size: 1rem;
+}
+
+.cv-section p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.cv-section ul {
+    list-style: none;
+}
+
+.cv-section li {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-container {
+    background: #111827;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.contact-container h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background-color: #020617;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* BUTTON */
+
+button {
+    margin-top: 25px;
+    padding: 12px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59,130,246,0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    section {
+        margin: 40px 20px;
+        padding: 25px;
+    }
+
+    .cv-container h1 {
+        font-size: 2rem;
+    }
+}

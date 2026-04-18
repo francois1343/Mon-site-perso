@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>François Dhont - Développeur</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ====== BLOCK CV ====== -->
+    <section class="cv-container">
+      <h1>François Dhont</h1>
+      <h2>Développeur</h2>
+
+      <div class="cv-section">
+        <h3>Coordonnées</h3>
+        <p>Rue les trous 1/3, 6500 Barbençon</p>
+        <p>+32 491 51 69 48</p>
+        <p>dh.fr110@gmail.com</p>
+        <p>Permis B</p>
+      </div>
+
+      <div class="cv-section">
+        <h3>Profil</h3>
+        <p>
+          Ambitieux, volontaire et motivé à relever de nouveaux défis. Je
+          souhaite construire une carrière solide dans le développement et
+          évoluer dans un environnement dynamique et innovant.
+        </p>
+      </div>
+
+      <div class="cv-section">
+        <h3>Compétences</h3>
+        <ul>
+          <li>Autonomie</li>
+          <li>Responsable</li>
+          <li>Logique</li>
+          <li>Poli</li>
+        </ul>
+      </div>
+
+      <div class="cv-section">
+        <h3>Expériences</h3>
+        <p><strong>Ouvrier agricole</strong> - 2019 / 2025</p>
+        <p><strong>Préparateur de commandes</strong> - 2018 / 2019</p>
+        <p><strong>Chauffeur déménageur</strong> - 2018 / 2019</p>
+        <p><strong>Agent d'entretien</strong> - 2017 / 2018</p>
+        <p><strong>Secrétaire étudiant</strong> - 2015 / 2017</p>
+      </div>
+
+      <div class="cv-section">
+        <h3>Formation</h3>
+        <p>Logistique : Transport (2019 - 2020)</p>
+        <p>CE2D : Langues étrangères</p>
+      </div>
+
+      <div class="cv-section">
+        <h3>Langues</h3>
+        <ul>
+          <li>Français (natif)</li>
+          <li>Anglais (opérationnel)</li>
+          <li>Espagnol (opérationnel)</li>
+          <li>Néerlandais (intermédiaire)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== BLOCK CONTACT ====== -->
+    <section class="contact-container">
+      <h2>Contact</h2>
+
+      <form id="contact-form">
+        <label>Nom & Prénom</label>
+        <input type="text" name="name" required />
+
+        <label>Adresse Email</label>
+        <input type="email" name="email" required />
+
+        <label>Objet de la demande</label>
+        <select name="subject" required>
+          <option value="">-- Choisir --</option>
+          <option value="site">Création de site web</option>
+          <option value="app">Application mobile</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
