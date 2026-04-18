@@ -1,96 +1,219 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>François Dhont - Développeur</title>
+    <title>François Dhont — Développeur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ====== BLOCK CV ====== -->
-    <section class="cv-container">
-      <h1>François Dhont</h1>
-      <h2>Développeur</h2>
 
-      <div class="cv-section">
-        <h3>Coordonnées</h3>
-        <p>Rue les trous 1/3, 6500 Barbençon</p>
-        <p>+32 491 51 69 48</p>
-        <p>dh.fr110@gmail.com</p>
-        <p>Permis B</p>
-      </div>
+    <!-- ======= THEME TOGGLE ======= -->
+    <div class="theme-toggle-wrapper" title="Changer le thème">
+      <span class="toggle-label">☀</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="theme-toggle" checked />
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+      </label>
+      <span class="toggle-label">☾</span>
+    </div>
 
-      <div class="cv-section">
-        <h3>Profil</h3>
-        <p>
-          Ambitieux, volontaire et motivé à relever de nouveaux défis. Je
-          souhaite construire une carrière solide dans le développement et
-          évoluer dans un environnement dynamique et innovant.
-        </p>
-      </div>
+    <!-- ======= CURSOR ======= -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
 
-      <div class="cv-section">
-        <h3>Compétences</h3>
-        <ul>
-          <li>Autonomie</li>
-          <li>Responsable</li>
-          <li>Logique</li>
-          <li>Poli</li>
-        </ul>
-      </div>
+    <!-- ======= CV BLOCK ======= -->
+    <section class="cv-block">
+      <div class="cv-inner">
 
-      <div class="cv-section">
-        <h3>Expériences</h3>
-        <p><strong>Développeur</strong></p>
-        <p><strong>Ouvrier agricole</strong></p>
-        <p><strong>Préparateur de commandes</strong></p>
-        <p><strong>Chauffeur déménageur</strong></p>
-        <p><strong>Agent d'entretien</strong></p>
-        <p><strong>Secrétariat</strong></p>
-      </div>
+        <div class="cv-header">
+          <div class="cv-header-text">
+            <p class="cv-eyebrow">Curriculum Vitæ</p>
+            <h1 class="cv-name">François<br/>Dhont</h1>
+            <p class="cv-title">Développeur Web &amp; Application</p>
+          </div>
+          <div class="cv-header-line"></div>
+        </div>
 
-      <div class="cv-section">
-        <h3>Formation</h3>
-        <p>Logistique : Transport</p>
-        <p>CE2D : Langues étrangères</p>
-        <p>Développeur web/app</p>
-      </div>
+        <div class="cv-grid">
 
-      <div class="cv-section">
-        <h3>Langues</h3>
-        <ul>
-          <li>Français (natif)</li>
-          <li>Anglais (opérationnel)</li>
-          <li>Espagnol (opérationnel)</li>
-          <li>Néerlandais (intermédiaire)</li>
-        </ul>
+          <div class="cv-col-left">
+
+            <div class="cv-card">
+              <h3 class="cv-card-title">Coordonnées</h3>
+              <ul class="cv-info-list">
+                <li>
+                  <span class="cv-icon">◎</span>
+                  Rue les trous 1/3, 6500 Barbençon
+                </li>
+                <li>
+                  <span class="cv-icon">◎</span>
+                  +32 491 51 69 48
+                </li>
+                <li>
+                  <span class="cv-icon">◎</span>
+                  dh.fr110@gmail.com
+                </li>
+                <li>
+                  <span class="cv-icon">◎</span>
+                  Permis B
+                </li>
+              </ul>
+            </div>
+
+            <div class="cv-card">
+              <h3 class="cv-card-title">Compétences</h3>
+              <div class="cv-tags">
+                <span class="cv-tag">Autonomie</span>
+                <span class="cv-tag">Responsable</span>
+                <span class="cv-tag">Logique</span>
+                <span class="cv-tag">Poli</span>
+              </div>
+            </div>
+
+            <div class="cv-card">
+              <h3 class="cv-card-title">Langues</h3>
+              <div class="cv-lang-list">
+                <div class="cv-lang-item">
+                  <span class="cv-lang-name">Français</span>
+                  <span class="cv-lang-level">Natif</span>
+                </div>
+                <div class="cv-lang-item">
+                  <span class="cv-lang-name">Anglais</span>
+                  <span class="cv-lang-level">Opérationnel</span>
+                </div>
+                <div class="cv-lang-item">
+                  <span class="cv-lang-name">Espagnol</span>
+                  <span class="cv-lang-level">Opérationnel</span>
+                </div>
+                <div class="cv-lang-item">
+                  <span class="cv-lang-name">Néerlandais</span>
+                  <span class="cv-lang-level">Intermédiaire</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cv-col-right">
+
+            <div class="cv-card">
+              <h3 class="cv-card-title">Profil</h3>
+              <p class="cv-text">
+                Ambitieux, volontaire et motivé à relever de nouveaux défis.
+                Je souhaite construire une carrière solide dans le développement
+                et évoluer dans un environnement dynamique et innovant.
+              </p>
+            </div>
+
+            <div class="cv-card">
+              <h3 class="cv-card-title">Expériences</h3>
+              <div class="cv-exp-list">
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Développeur</span>
+                </div>
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Ouvrier agricole</span>
+                </div>
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Préparateur de commandes</span>
+                </div>
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Chauffeur déménageur</span>
+                </div>
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Agent d'entretien</span>
+                </div>
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Secrétariat</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-card">
+              <h3 class="cv-card-title">Formation</h3>
+              <div class="cv-exp-list">
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Logistique : Transport</span>
+                </div>
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>CE2D : Langues étrangères</span>
+                </div>
+                <div class="cv-exp-item">
+                  <span class="cv-exp-dot"></span>
+                  <span>Développeur Web &amp; Application</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ====== BLOCK CONTACT ====== -->
-    <section class="contact-container">
-      <h2>Contact</h2>
+    <!-- ======= CONTACT BLOCK ======= -->
+    <section class="contact-block">
+      <div class="contact-inner">
 
-      <form id="contact-form">
-        <label>Nom & Prénom</label>
-        <input type="text" name="name" required />
+        <div class="contact-header">
+          <p class="cv-eyebrow">Me contacter</p>
+          <h2 class="contact-title">Travaillons<br/>ensemble.</h2>
+        </div>
 
-        <label>Adresse Email</label>
-        <input type="email" name="email" required />
+        <form id="contact-form" class="contact-form" novalidate>
 
-        <label>Objet de la demande</label>
-        <select name="subject" required>
-          <option value="">-- Choisir --</option>
-          <option value="site">Création de site web</option>
-          <option value="app">Application mobile</option>
-        </select>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom &amp; Prénom</label>
+              <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse Email</label>
+              <input type="email" id="email" name="email" placeholder="jean@exemple.com" required />
+              <span class="form-line"></span>
+            </div>
+          </div>
 
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
+          <div class="form-group">
+            <label for="subject">Objet de la demande</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>— Sélectionner un objet —</option>
+              <option value="site">Création de site web</option>
+              <option value="app">Application mobile</option>
+            </select>
+            <span class="form-line"></span>
+          </div>
 
-        <button type="submit">Envoyer</button>
-      </form>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet…" required></textarea>
+            <span class="form-line"></span>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Envoyer le message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+
+        </form>
+      </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
