@@ -2,6 +2,8 @@
 
 Date de l'audit initial : 17 octobre 2026.
 
+> Dernier choix de direction artistique : noir par défaut, blanc au choix et accents vert acide/violet empruntés au portfolio. Les recommandations de palette strictement monochrome et de blanc par défaut ci-dessous restent l'historique de l'audit initial.
+
 > Évolution de la DA : à la demande de François, le rapprochement avec le portfolio a ensuite été renforcé. Les deux sites partagent désormais Unbounded, Space Grotesk, DM Mono, les boutons pilules, les titres détourés et les motifs orbitaux. Le CV conserve ses deux thèmes blanc/noir, son organisation et des interactions discrètes sans son. Les propositions typographiques ci-dessous décrivent l'état et les pistes de l'audit initial.
 
 > Audit initial conservé pour référence. Depuis cet audit, la direction retenue est celle d'un CV distinct du portfolio : rapprochement graphique léger, signature FD., blanc/noir et effets discrets sans son. Le favicon, les détails communs, la suppression du double chargement des polices et les retours accessibles du formulaire ont été intégrés. Consulter la roadmap pour l'état à jour ; les anciennes suggestions de galerie de projets ne sont plus l'objectif de ce site.

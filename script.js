@@ -5,12 +5,12 @@
 const toggleInput = document.getElementById("theme-toggle");
 const html        = document.documentElement;
 
-// Le blanc est le thème initial ; le choix d'un visiteur régulier reste mémorisé.
+// Le noir est le thème initial ; le choix d'un visiteur régulier reste mémorisé.
 let savedTheme;
 try {
   savedTheme = localStorage.getItem("theme");
 } catch (_) { /* Le stockage local est facultatif. */ }
-const initTheme = savedTheme === "dark" ? "dark" : "light";
+const initTheme = savedTheme === "light" ? "light" : "dark";
 const themeColor = document.querySelector('meta[name="theme-color"]');
 
 function applyTheme(theme) {
@@ -80,7 +80,7 @@ form.addEventListener("submit", function (e) {
       btnText.textContent  = "Message envoyé";
       btnArrow.textContent = "✓";
       btnArrow.style.animation = "none";
-      btn.style.background = "var(--text-secondary)";
+      btn.style.background = "";
       form.reset();
       document.getElementById("form-status").textContent = "Votre message a bien été envoyé.";
 

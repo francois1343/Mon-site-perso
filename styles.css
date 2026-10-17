@@ -1,6 +1,10 @@
-/* FD. — le langage graphique du portfolio, décliné pour un CV monochrome. */
+/* FD. — une base sobre, relevée des accents vert acide et violet du portfolio. */
 
-:root { --page-gutter: clamp(16px, 2.5vw, 64px); }
+:root {
+  --page-gutter: clamp(16px, 2.5vw, 64px);
+  --accent-lime: #d8ff36;
+  --accent-ink: #111211;
+}
 
 [data-theme="light"] {
   color-scheme: light;
@@ -12,7 +16,10 @@
   --text-muted: #686868;
   --border: #ddddda;
   --border-accent: #b9b9b5;
-  --accent-soft: rgba(0, 0, 0, 0.04);
+  --accent-text: #506700;
+  --accent-violet: #6550bd;
+  --accent-soft: rgba(112, 144, 0, 0.08);
+  --violet-soft: rgba(101, 80, 189, 0.055);
   --input-bg: #fafafa;
   --toggle-bg: #ddddda;
   --toggle-thumb: #111111;
@@ -32,7 +39,10 @@
   --text-muted: #a3a3a3;
   --border: #333333;
   --border-accent: #555555;
-  --accent-soft: rgba(255, 255, 255, 0.05);
+  --accent-text: #d8ff36;
+  --accent-violet: #9c8cff;
+  --accent-soft: rgba(216, 255, 54, 0.07);
+  --violet-soft: rgba(156, 140, 255, 0.06);
   --input-bg: #111111;
   --toggle-bg: #2a2a2a;
   --toggle-thumb: #f0f0f0;
@@ -66,7 +76,7 @@ a {
 }
 a:hover, a:focus-visible { text-decoration-color: currentColor; }
 button, input, textarea, select { font: inherit; }
-:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 5px; }
+:focus-visible { outline: 2px solid var(--accent-violet); outline-offset: 5px; }
 
 #cv-name, #contact-title, #parcours { scroll-margin-top: 28px; }
 #cv-name:focus, #parcours:focus { outline: none; }
@@ -100,7 +110,10 @@ button, input, textarea, select { font: inherit; }
 .brand {
   font-size: 28px; text-decoration: none; padding: 10px 5px 10px 0;
 }
-.brand span { display: inline-block; transition: transform 0.2s ease; }
+.brand span {
+  display: inline-block; color: var(--accent-text); transition: transform 0.2s ease;
+}
+.signature-dot { color: var(--accent-text); }
 .brand:hover span, .brand:focus-visible span { transform: translateY(-2px); }
 
 .site-label, .site-footer, .section-index, .cv-eyebrow {
@@ -119,7 +132,7 @@ button, input, textarea, select { font: inherit; }
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .contact-link:hover, .contact-link:focus-visible {
-  background: var(--accent-soft); border-color: var(--text-primary);
+  background: var(--accent-lime); border-color: var(--accent-lime); color: var(--accent-ink);
 }
 .contact-link span {
   display: inline-block; margin-left: 7px; transition: transform 0.2s ease;
@@ -143,9 +156,11 @@ button, input, textarea, select { font: inherit; }
   border-radius: 50%; background: var(--toggle-thumb);
   transition: transform 0.25s ease, background 0.25s ease;
 }
-.toggle-switch input:checked + .toggle-track .toggle-thumb { transform: translateX(20px); }
+.toggle-switch input:checked + .toggle-track .toggle-thumb {
+  transform: translateX(20px); background: var(--accent-lime);
+}
 .toggle-switch input:focus-visible + .toggle-track {
-  outline: 2px solid var(--text-primary); outline-offset: 4px;
+  outline: 2px solid var(--accent-violet); outline-offset: 4px;
 }
 
 /* Grande feuille de CV, typographie géométrique et trait détouré. */
@@ -168,11 +183,11 @@ button, input, textarea, select { font: inherit; }
   display: flex; align-items: center; gap: 10px;
   font-family: 'DM Mono', monospace; font-size: 0.65rem; line-height: 1.7;
   letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--text-secondary); margin-bottom: 26px;
+  color: var(--accent-text); margin-bottom: 26px;
 }
 .cv-title::before {
   content: ''; width: 6px; height: 6px; flex-shrink: 0;
-  border-radius: 50%; background: var(--text-primary);
+  border-radius: 50%; background: var(--accent-text);
 }
 .cv-name {
   font-family: 'Unbounded', sans-serif; font-size: clamp(2.2rem, 7vw, 7rem);
@@ -186,14 +201,14 @@ button, input, textarea, select { font: inherit; }
     paint-order: stroke fill;
   }
 }
-.name-dot { color: var(--text-primary); }
+.name-dot { color: var(--accent-text); -webkit-text-stroke: 0; }
 .cv-intro {
   max-width: 64ch; font-size: 1rem; line-height: 1.65; color: var(--text-secondary);
 }
 .submit-btn {
   display: inline-flex; align-items: center; justify-content: space-between; gap: 28px;
-  background: var(--text-primary); color: var(--bg-card);
-  border: 1px solid var(--text-primary); border-radius: 999px;
+  background: var(--accent-lime); color: var(--accent-ink);
+  border: 1px solid var(--accent-lime); border-radius: 999px;
   font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600;
   text-decoration: none; padding: 15px 23px; cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -206,34 +221,37 @@ button, input, textarea, select { font: inherit; }
 /* Emblème vectoriel du processus créatif : repères, flux et disque FD. */
 .hero-orbit {
   width: 100%; max-width: 460px; justify-self: center;
-  color: var(--text-primary); pointer-events: none;
+  color: var(--accent-violet); pointer-events: none;
 }
 .process-emblem { display: block; width: 100%; height: auto; }
 .emblem-guides { stroke: var(--border-accent); stroke-width: 1; }
+.emblem-guides circle:nth-child(2) { stroke: var(--accent-violet); opacity: 0.55; }
 .emblem-flow { stroke: currentColor; stroke-width: 1.1; }
-.emblem-disc { fill: var(--text-primary); }
-.emblem-grooves { stroke: var(--bg-card); opacity: 0.18; stroke-width: 0.6; }
+.emblem-disc { fill: var(--accent-ink); stroke: var(--accent-lime); stroke-width: 1.2; }
+.emblem-grooves { stroke: #eae9e2; opacity: 0.18; stroke-width: 0.6; }
 .emblem-signature {
   font-family: 'Unbounded', sans-serif; font-size: 56px; font-weight: 900;
-  letter-spacing: -6px; fill: var(--bg-card);
+  letter-spacing: -6px; fill: #eae9e2;
 }
+.emblem-dot { fill: var(--accent-lime); }
 .emblem-subtitle {
   font-family: 'DM Mono', monospace; font-size: 7.5px;
-  letter-spacing: 1.2px; fill: var(--bg-card);
+  letter-spacing: 1.2px; fill: #eae9e2;
 }
-.emblem-nodes { fill: var(--bg-card); stroke: var(--text-primary); stroke-width: 1; }
+.emblem-nodes { fill: var(--bg-card); stroke: var(--accent-violet); stroke-width: 1; }
 .emblem-numbers, .emblem-labels, .emblem-caption {
   font-family: 'DM Mono', monospace; fill: var(--text-primary);
 }
 .emblem-numbers { font-size: 10px; }
-.emblem-labels { font-size: 12px; letter-spacing: 2.4px; }
+.emblem-labels { font-size: 12px; letter-spacing: 2.4px; fill: var(--accent-text); }
+.emblem-labels text:nth-child(2) { fill: var(--accent-violet); }
 .emblem-caption { font-size: 8px; letter-spacing: 2px; fill: var(--text-secondary); }
 .cv-header-line {
   position: absolute; right: 0; bottom: 0; left: 0; height: 1px;
   background: var(--border-accent);
 }
 .section-index { margin-bottom: 24px; }
-.section-index span, .cv-eyebrow span { margin-right: 8px; color: var(--text-primary); }
+.section-index span, .cv-eyebrow span { margin-right: 8px; color: var(--accent-text); }
 
 /* Cartes : même grille, bordures et pastilles que le portfolio. */
 .cv-grid {
@@ -255,6 +273,7 @@ button, input, textarea, select { font: inherit; }
 }
 .cv-card--profile {
   background: var(--profile-bg); border-color: var(--profile-bg); color: var(--profile-text);
+  border-left: 3px solid var(--accent-violet);
 }
 .cv-card--profile .cv-card-title {
   border-color: color-mix(in srgb, var(--profile-text) 22%, transparent);
@@ -293,6 +312,7 @@ button, input, textarea, select { font: inherit; }
   content: ''; position: absolute; top: 0.45rem; left: -4px; width: 7px; height: 7px;
   background: var(--text-primary); border-radius: 50%; box-shadow: 0 0 0 4px var(--bg-card);
 }
+.timeline-item:first-child::before { background: var(--accent-text); }
 .timeline-heading {
   display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px;
 }
@@ -300,7 +320,7 @@ button, input, textarea, select { font: inherit; }
 .timeline-heading time, .timeline-place {
   font-family: 'DM Mono', monospace; font-size: 0.6875rem; color: var(--text-muted);
 }
-.timeline-heading time { flex-shrink: 0; }
+.timeline-heading time { flex-shrink: 0; color: var(--accent-violet); }
 .timeline-place { margin: 5px 0 9px; text-transform: uppercase; letter-spacing: 0.05em; }
 .timeline-item > p:last-child { font-size: 0.83rem; line-height: 1.7; color: var(--text-secondary); }
 
@@ -328,7 +348,7 @@ button, input, textarea, select { font: inherit; }
 .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); opacity: 1; }
 .form-group input:hover, .form-group select:hover, .form-group textarea:hover { border-color: var(--border-accent); }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  border-color: var(--text-primary); outline: 2px solid var(--accent-soft); outline-offset: 2px;
+  border-color: var(--accent-violet); outline: 2px solid var(--violet-soft); outline-offset: 2px;
 }
 .form-group select {
   appearance: none; cursor: pointer; padding-right: 38px;
@@ -409,4 +429,4 @@ button, input, textarea, select { font: inherit; }
 @media (forced-colors: active) {
   .cv-name-outline { color: CanvasText; -webkit-text-stroke: 0; }
 }
-::selection { background: var(--text-primary); color: var(--bg-card); }
+::selection { background: var(--accent-lime); color: var(--accent-ink); }

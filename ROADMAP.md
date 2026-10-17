@@ -5,15 +5,16 @@ Cette roadmap privilégie l'impact sur une candidature avant les effets décorat
 ## Décisions validées et réalisées
 
 - [x] Préserver l'organisation du CV en rapprochant davantage son identité du portfolio.
-- [x] Ajouter la signature FD. monochrome et son favicon.
+- [x] Ajouter la signature FD. et son favicon avec un point vert acide.
 - [x] Partager les trois typographies du portfolio : Unbounded, Space Grotesk et DM Mono.
 - [x] Harmoniser les boutons pilules, les flèches, les pastilles et les bordures.
-- [x] Reprendre les titres détourés et le motif orbital dans une version monochrome et statique.
+- [x] Reprendre les titres détourés et le motif orbital dans une version statique avec accents vert/violet.
 - [x] Réduire les ombres et accentuer la hiérarchie avec la carte Profil inversée.
 - [x] Utiliser environ 95 % de la largeur sur ordinateur et adapter la grille au grand écran.
 - [x] Supprimer les deux boutons sous l'introduction et le lien Parcours de la navigation.
 - [x] Remplacer le petit motif orbital par un emblème vectoriel « Think / Design / Build ».
-- [x] Garder le blanc par défaut et le noir au choix, avec mémorisation.
+- [x] Utiliser le noir par défaut et le blanc au choix, avec mémorisation.
+- [x] Ajouter des touches vert acide et violettes sur la signature, les repères, les boutons et l'emblème.
 - [x] Garder des effets discrets, accessibles au clavier et sans son.
 - [x] Revenir au curseur natif pour une interaction précise et légère.
 
@@ -23,7 +24,7 @@ Le portfolio « FD. — Ctrl+Z My Life » porte les projets et l'univers créati
 
 Priorité : immédiate.
 
-- [x] Ajouter un favicon SVG monochrome.
+- [x] Ajouter un favicon SVG FD. avec l'accent vert du portfolio.
 - [x] Supprimer le chargement Google Fonts en double.
 - [ ] Ajouter un lien de téléchargement du CV PDF.
 - [x] Ajouter `aria-live` aux retours du formulaire.
@@ -55,7 +56,7 @@ Priorité : haute.
 - [x] Ajouter une police monospace uniquement pour les micro-détails.
 - [ ] Faire évoluer les détails communs si l'identité du portfolio change.
 
-Critères de fin : le site reste sobre mais devient identifiable sans dépendre d'une couleur vive.
+Critères de fin : le site reste sobre, avec des accents verts et violets cohérents et lisibles dans les deux thèmes.
 
 ## Phase 3 — Micro-interactions
 

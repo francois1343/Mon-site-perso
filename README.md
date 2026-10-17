@@ -16,12 +16,12 @@ Le CV privilégie la lecture rapide des qualifications et la prise de contact. L
 ## Direction actuelle
 
 - Deux thèmes uniquement : blanc et noir.
-- Thème blanc par défaut lors de la première visite.
-- Esthétique géométrique et monochrome, issue du portfolio FD.
+- Thème noir par défaut lors de la première visite ; choix du blanc toujours disponible et mémorisé.
+- Esthétique géométrique issue du portfolio FD., avec accents vert acide et violet sur une base sobre.
 - Même trio typographique : Unbounded pour les titres, Space Grotesk pour le texte et DM Mono pour les repères.
 - Nom en capitales, seconde ligne détourée et emblème vectoriel statique « Think / Design / Build » inspirés du portfolio.
 - Boutons pilules, flèches, pastilles à bordure fine et sections numérotées harmonisés.
-- Organisation du CV conservée, avec une carte Profil en contraste inversé et des ombres légères.
+- Organisation du CV conservée, avec une carte Profil en contraste inversé, un filet violet et des ombres légères.
 - Mise en page fluide occupant environ 95 % de l'écran sur ordinateur ; longueurs de texte limitées pour la lecture.
 - Navigation simplifiée : seul Contact est conservé en haut, sans boutons sous l'introduction.
 - Sur grand écran, les certifications et atouts sont côte à côte, et le contact utilise deux colonnes.
@@ -44,7 +44,7 @@ Le CV privilégie la lecture rapide des qualifications et la prise de contact. L
 ├── index.html       # Contenu et structure de la page
 ├── styles.css      # Thèmes, mise en page et responsive
 ├── script.js       # Thème et formulaire
-├── favicon.svg     # Signature FD. monochrome
+├── favicon.svg     # Signature FD. avec accent vert acide
 ├── AUDIT.md        # Audit UX, visuel et technique
 └── ROADMAP.md      # Plan d'amélioration priorisé
 ```
@@ -86,8 +86,10 @@ Après l'uniformisation graphique avec le portfolio (Unbounded / Space Grotesk /
 Vérifications réalisées :
 
 - Thèmes blanc et noir de 320 à 2560 px, sans débordement horizontal ni chevauchement du nom avec l'emblème.
-- Première visite blanche même si le système utilise le thème sombre.
+- Première visite noire même si le système utilise le thème clair.
 - Conservation du choix après rechargement.
+- Contraste d'au moins 4,5:1 sur les textes accentués et le bouton d'envoi dans les deux thèmes.
+- Valeur de préférence invalide ou stockage local bloqué : noir par défaut, sélecteur toujours utilisable.
 - Rendu visuel sur ordinateur et mobile, avec réduction des animations.
 - Bouton de thème et repli e-mail utilisables lorsque le CDN EmailJS est bloqué.
 - Favicon accessible et aucune exception JavaScript.
@@ -107,7 +109,8 @@ Voir [AUDIT.md](AUDIT.md) pour l'analyse complète et [ROADMAP.md](ROADMAP.md) p
 ## Choix validés
 
 - Rapprocher plus nettement la direction artistique du CV de celle du portfolio, tout en conservant son rôle et son organisation.
-- Blanc à la première visite, puis mémorisation du choix, indépendamment du thème système.
+- Noir à la première visite, puis mémorisation du choix, indépendamment du thème système.
+- Accents du portfolio : vert acide `#D8FF36` et violet `#9C8CFF` dans le thème sombre, avec des variantes plus foncées pour les petits textes en thème clair.
 - Base visuelle commune avec FD. : typographies, signature, formes des boutons, bordures et détails graphiques.
 - Interactions discrètes et aucune fonction sonore.
 - L'audit initial est conservé comme historique ; la roadmap reflète ces décisions.
@@ -118,6 +121,6 @@ Voir [AUDIT.md](AUDIT.md) pour l'analyse complète et [ROADMAP.md](ROADMAP.md) p
 | --- | --- | --- |
 | Titres et signature | Unbounded, nom en partie détouré | Unbounded, grands titres en partie détourés |
 | Texte et repères | Space Grotesk / DM Mono | Space Grotesk / DM Mono |
-| Boutons et pastilles | Pilules monochromes, flèches et traits fins | Mêmes formes avec accents colorés |
-| Emblème du processus | Disque FD. et trois étapes reliées, statique et monochrome, visible sur ordinateur | Univers orbital plus expressif et animé |
-| Couleurs et son | Blanc/noir, blanc par défaut, sans son | Univers coloré et expérience vinyle |
+| Boutons et pastilles | Bouton d'envoi vert acide, flèches et traits fins | Mêmes formes avec accents colorés |
+| Emblème du processus | Disque FD., point vert, repères et flux violets, statique et visible sur ordinateur | Univers orbital plus expressif et animé |
+| Couleurs et son | Noir par défaut, blanc au choix, accents vert/violet, sans son | Univers coloré et expérience vinyle |
