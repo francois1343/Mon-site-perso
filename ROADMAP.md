@@ -10,6 +10,9 @@ Cette roadmap privilégie l'impact sur une candidature avant les effets décorat
 - [x] Harmoniser les boutons pilules, les flèches, les pastilles et les bordures.
 - [x] Reprendre les titres détourés et le motif orbital dans une version monochrome et statique.
 - [x] Réduire les ombres et accentuer la hiérarchie avec la carte Profil inversée.
+- [x] Utiliser environ 95 % de la largeur sur ordinateur et adapter la grille au grand écran.
+- [x] Supprimer les deux boutons sous l'introduction et le lien Parcours de la navigation.
+- [x] Remplacer le petit motif orbital par un emblème vectoriel « Think / Design / Build ».
 - [x] Garder le blanc par défaut et le noir au choix, avec mémorisation.
 - [x] Garder des effets discrets, accessibles au clavier et sans son.
 - [x] Revenir au curseur natif pour une interaction précise et légère.

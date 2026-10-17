@@ -19,9 +19,12 @@ Le CV privilégie la lecture rapide des qualifications et la prise de contact. L
 - Thème blanc par défaut lors de la première visite.
 - Esthétique géométrique et monochrome, issue du portfolio FD.
 - Même trio typographique : Unbounded pour les titres, Space Grotesk pour le texte et DM Mono pour les repères.
-- Nom en capitales, seconde ligne détourée et motif orbital statique inspirés du portfolio.
+- Nom en capitales, seconde ligne détourée et emblème vectoriel statique « Think / Design / Build » inspirés du portfolio.
 - Boutons pilules, flèches, pastilles à bordure fine et sections numérotées harmonisés.
 - Organisation du CV conservée, avec une carte Profil en contraste inversé et des ombres légères.
+- Mise en page fluide occupant environ 95 % de l'écran sur ordinateur ; longueurs de texte limitées pour la lecture.
+- Navigation simplifiée : seul Contact est conservé en haut, sans boutons sous l'introduction.
+- Sur grand écran, les certifications et atouts sont côte à côte, et le contact utilise deux colonnes.
 - Curseur natif, transitions légères au survol et au clavier, sans son.
 - Mise en page responsive sans framework.
 - Formulaire de contact envoyé avec EmailJS.
@@ -82,7 +85,7 @@ Après l'uniformisation graphique avec le portfolio (Unbounded / Space Grotesk /
 
 Vérifications réalisées :
 
-- Thèmes blanc et noir à 320, 390, 620, 768, 820, 1000 et 1440 px, sans débordement horizontal ni chevauchement du nom avec le motif orbital.
+- Thèmes blanc et noir de 320 à 2560 px, sans débordement horizontal ni chevauchement du nom avec l'emblème.
 - Première visite blanche même si le système utilise le thème sombre.
 - Conservation du choix après rechargement.
 - Rendu visuel sur ordinateur et mobile, avec réduction des animations.
@@ -116,5 +119,5 @@ Voir [AUDIT.md](AUDIT.md) pour l'analyse complète et [ROADMAP.md](ROADMAP.md) p
 | Titres et signature | Unbounded, nom en partie détouré | Unbounded, grands titres en partie détourés |
 | Texte et repères | Space Grotesk / DM Mono | Space Grotesk / DM Mono |
 | Boutons et pastilles | Pilules monochromes, flèches et traits fins | Mêmes formes avec accents colorés |
-| Motif orbital | Statique et monochrome, masqué sur petit écran | Plus expressif et animé |
+| Emblème du processus | Disque FD. et trois étapes reliées, statique et monochrome, visible sur ordinateur | Univers orbital plus expressif et animé |
 | Couleurs et son | Blanc/noir, blanc par défaut, sans son | Univers coloré et expérience vinyle |
