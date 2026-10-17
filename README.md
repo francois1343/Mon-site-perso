@@ -1,6 +1,6 @@
 # CV en ligne — François Dhont
 
-CV monopage de François Dhont, développeur Front-End junior, complémentaire du portfolio « FD. — Ctrl+Z My Life ».
+CV monopage de François Dhont, développeur Front-End, complémentaire du portfolio « FD. — Ctrl+Z My Life ».
 
 ## Objectif
 
