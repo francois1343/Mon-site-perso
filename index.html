@@ -1,99 +1,137 @@
 <!doctype html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>François Dhont — Développeur</title>
+    <meta name="description" content="CV en ligne de François Dhont, développeur Front-End junior basé à Beaumont, Belgique. Parcours, compétences et contact." />
+    <meta name="theme-color" content="#f5f5f3" />
+    <title>François Dhont — Développeur Front-End junior</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script>
+      // Restaurer le choix avant le premier affichage ; blanc à la première visite.
+      try {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.dataset.theme = "dark";
+          document.querySelector('meta[name="theme-color"]').content = "#0a0a0a";
+        }
+      } catch (_) { /* Le thème blanc reste disponible sans stockage local. */ }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
 
-    <!-- ======= THEME TOGGLE ======= -->
-    <div class="theme-toggle-wrapper" title="Changer le thème">
-      <span class="toggle-label">☀</span>
+    <a class="skip-link" href="#cv-name">Aller au CV</a>
+    <header class="site-bar">
+      <a class="brand" href="#cv-name" aria-label="FD. — François Dhont, retour au CV">FD<span>.</span></a>
+      <span class="site-label">CV en ligne</span>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="nav-link" href="#parcours">Parcours</a>
+        <a class="contact-link" href="#contact-title">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    <div class="theme-toggle-wrapper">
+      <span class="toggle-label" aria-hidden="true">☀</span>
       <label class="toggle-switch">
-        <input type="checkbox" id="theme-toggle" checked />
+        <span class="sr-only">Activer le thème noir</span>
+        <input type="checkbox" id="theme-toggle" aria-label="Activer le thème noir" />
         <span class="toggle-track">
           <span class="toggle-thumb"></span>
         </span>
       </label>
-      <span class="toggle-label">☾</span>
+      <span class="toggle-label" aria-hidden="true">☾</span>
     </div>
-
-    <!-- ======= CURSOR ======= -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
+    </header>
 
     <!-- ======= CV BLOCK ======= -->
-    <section class="cv-block">
+    <main>
+    <section class="cv-block" aria-labelledby="cv-name">
       <div class="cv-inner">
 
         <div class="cv-header">
           <div class="cv-header-text">
-            <p class="cv-eyebrow">Curriculum Vitæ</p>
-            <h1 class="cv-name">François<br/>Dhont</h1>
-            <p class="cv-title">Développeur Web &amp; Application</p>
+            <p class="cv-title">Développeur Front-End junior</p>
+            <h1 class="cv-name" id="cv-name" tabindex="-1">François<br/><span class="cv-name-outline">Dhont<span class="name-dot">.</span></span></h1>
+            <p class="cv-intro">Je conçois des interfaces web claires, accessibles et modernes, avec une attention particulière portée à l'expérience utilisateur.</p>
+            <div class="hero-actions">
+              <a class="pill-link" href="#contact-title">Me contacter <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#parcours">Voir mon parcours <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <div class="hero-orbit" aria-hidden="true">
+            <span class="orbit-ring"></span>
+            <span class="orbit-core">✳</span>
+            <span class="orbit-caption">Think. Design. Build.</span>
           </div>
           <div class="cv-header-line"></div>
         </div>
 
+        <p class="section-index"><span>(01)</span> / Profil &amp; parcours</p>
         <div class="cv-grid">
 
           <div class="cv-col-left">
 
             <div class="cv-card">
-              <h3 class="cv-card-title">Coordonnées</h3>
+              <h2 class="cv-card-title">Coordonnées</h2>
               <ul class="cv-info-list">
                 <li>
-                  <span class="cv-icon">◎</span>
-                  Rue les trous 1/3, 6500 Barbençon
+                  <span class="cv-icon" aria-hidden="true">◎</span>
+                  Beaumont, Belgique
                 </li>
                 <li>
-                  <span class="cv-icon">◎</span>
-                  +32 491 51 69 48
+                  <span class="cv-icon" aria-hidden="true">◎</span>
+                  <a href="mailto:dh.fr1109@gmail.com">dh.fr1109@gmail.com</a>
                 </li>
                 <li>
-                  <span class="cv-icon">◎</span>
-                  dh.fr110@gmail.com
+                  <span class="cv-icon" aria-hidden="true">◎</span>
+                  <a href="https://www.linkedin.com/in/fran%C3%A7ois-dhont-808850173" target="_blank" rel="noreferrer">LinkedIn</a>
                 </li>
                 <li>
-                  <span class="cv-icon">◎</span>
+                  <span class="cv-icon" aria-hidden="true">◎</span>
+                  <a href="https://github.com/francois1343" target="_blank" rel="noreferrer">GitHub · francois1343</a>
+                </li>
+                <li>
+                  <span class="cv-icon" aria-hidden="true">◎</span>
                   Permis B
                 </li>
               </ul>
             </div>
 
             <div class="cv-card">
-              <h3 class="cv-card-title">Compétences</h3>
+              <h2 class="cv-card-title">Stack &amp; outils</h2>
               <div class="cv-tags">
-                <span class="cv-tag">Autonomie</span>
-                <span class="cv-tag">Responsable</span>
-                <span class="cv-tag">Logique</span>
-                <span class="cv-tag">Poli</span>
+                <span class="cv-tag">HTML / CSS</span>
+                <span class="cv-tag">JavaScript ES6+</span>
+                <span class="cv-tag">React</span>
+                <span class="cv-tag">Vue.js</span>
+                <span class="cv-tag">Astro</span>
+                <span class="cv-tag">API REST</span>
+                <span class="cv-tag">Git &amp; GitHub</span>
+                <span class="cv-tag">Figma</span>
+                <span class="cv-tag">WordPress</span>
+                <span class="cv-tag">Docker</span>
               </div>
             </div>
 
             <div class="cv-card">
-              <h3 class="cv-card-title">Langues</h3>
+              <h2 class="cv-card-title">Langues</h2>
               <div class="cv-lang-list">
                 <div class="cv-lang-item">
                   <span class="cv-lang-name">Français</span>
-                  <span class="cv-lang-level">Natif</span>
+                  <span class="cv-lang-level">C2</span>
                 </div>
                 <div class="cv-lang-item">
                   <span class="cv-lang-name">Anglais</span>
-                  <span class="cv-lang-level">Opérationnel</span>
-                </div>
-                <div class="cv-lang-item">
-                  <span class="cv-lang-name">Espagnol</span>
-                  <span class="cv-lang-level">Opérationnel</span>
+                  <span class="cv-lang-level">B2</span>
                 </div>
                 <div class="cv-lang-item">
                   <span class="cv-lang-name">Néerlandais</span>
-                  <span class="cv-lang-level">Intermédiaire</span>
+                  <span class="cv-lang-level">B1</span>
+                </div>
+                <div class="cv-lang-item">
+                  <span class="cv-lang-name">Espagnol</span>
+                  <span class="cv-lang-level">B1</span>
                 </div>
               </div>
             </div>
@@ -102,60 +140,68 @@
 
           <div class="cv-col-right">
 
-            <div class="cv-card">
-              <h3 class="cv-card-title">Profil</h3>
+            <div class="cv-card cv-card--profile">
+              <h2 class="cv-card-title">Profil</h2>
               <p class="cv-text">
-                Ambitieux, volontaire et motivé à relever de nouveaux défis.
-                Je souhaite construire une carrière solide dans le développement
-                et évoluer dans un environnement dynamique et innovant.
+                Passionné par le code, je recherche une première expérience en
+                Front-End afin de progresser aux côtés d'une équipe expérimentée
+                et de contribuer à des projets innovants.
               </p>
             </div>
 
             <div class="cv-card">
-              <h3 class="cv-card-title">Expériences</h3>
-              <div class="cv-exp-list">
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Développeur</span>
-                </div>
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Ouvrier agricole</span>
-                </div>
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Préparateur de commandes</span>
-                </div>
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Chauffeur déménageur</span>
-                </div>
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Agent d'entretien</span>
-                </div>
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Secrétariat</span>
-                </div>
+              <h2 class="cv-card-title" id="parcours" tabindex="-1">Parcours</h2>
+              <div class="timeline">
+                <article class="timeline-item">
+                  <div class="timeline-heading">
+                    <h3>Concepteur Web Front-End</h3>
+                    <time>2026 — 2027</time>
+                  </div>
+                  <p class="timeline-place">Cepegra</p>
+                  <p>React, Vue.js, JavaScript ES6+, Git, Jamstack et outils d'IA.</p>
+                </article>
+                <article class="timeline-item">
+                  <div class="timeline-heading">
+                    <h3>Chef d'équipe</h3>
+                    <time>2019 — 2026</time>
+                  </div>
+                  <p class="timeline-place">Fievet &amp; Heurtefeu</p>
+                  <p>Organisation du travail, répartition des tâches, communication et résolution de problèmes.</p>
+                </article>
+                <article class="timeline-item">
+                  <div class="timeline-heading">
+                    <h3>Transporteur &amp; préparateur de commandes</h3>
+                    <time>2021 — 2023</time>
+                  </div>
+                  <p class="timeline-place">Bidfood</p>
+                  <p>Gestion autonome des commandes et contrôle qualité.</p>
+                </article>
               </div>
             </div>
 
             <div class="cv-card">
-              <h3 class="cv-card-title">Formation</h3>
-              <div class="cv-exp-list">
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Logistique : Transport</span>
-                </div>
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>CE2D : Langues étrangères</span>
-                </div>
-                <div class="cv-exp-item">
-                  <span class="cv-exp-dot"></span>
-                  <span>Développeur Web &amp; Application</span>
-                </div>
+              <h2 class="cv-card-title">Certifications &amp; attestations</h2>
+              <div class="cv-tags">
+                <span class="cv-tag">Responsive Web Design</span>
+                <span class="cv-tag">JavaScript</span>
+                <span class="cv-tag">Front-End Development</span>
+                <span class="cv-tag">APIs</span>
+                <span class="cv-tag">Quality Assurance</span>
+                <span class="cv-tag">Google Analytics</span>
+                <span class="cv-tag">Microsoft Learn</span>
+                <span class="cv-tag">GitHub Foundations</span>
+              </div>
+            </div>
+
+            <div class="cv-card">
+              <h2 class="cv-card-title">Atouts</h2>
+              <div class="cv-tags">
+                <span class="cv-tag">Esprit d'équipe</span>
+                <span class="cv-tag">Leadership serein</span>
+                <span class="cv-tag">Créativité</span>
+                <span class="cv-tag">Persévérance</span>
+                <span class="cv-tag">Communication</span>
+                <span class="cv-tag">Sens des responsabilités</span>
               </div>
             </div>
 
@@ -166,12 +212,13 @@
     </section>
 
     <!-- ======= CONTACT BLOCK ======= -->
-    <section class="contact-block">
+    <section class="contact-block" aria-labelledby="contact-title">
       <div class="contact-inner">
 
         <div class="contact-header">
-          <p class="cv-eyebrow">Me contacter</p>
-          <h2 class="contact-title">Travaillons<br/>ensemble.</h2>
+          <p class="cv-eyebrow"><span>(02)</span> / Me contacter</p>
+          <h2 class="contact-title" id="contact-title">Travaillons<br/>ensemble.</h2>
+          <p class="contact-copy">Une opportunité, une collaboration ou un projet en tête ? Écrivez-moi.</p>
         </div>
 
         <form id="contact-form" class="contact-form" novalidate>
@@ -193,8 +240,9 @@
             <label for="subject">Objet de la demande</label>
             <select id="subject" name="subject" required>
               <option value="" disabled selected>— Sélectionner un objet —</option>
-              <option value="site">Création de site web</option>
-              <option value="app">Application mobile</option>
+              <option value="opportunity">Opportunité professionnelle</option>
+              <option value="project">Projet web</option>
+              <option value="collaboration">Collaboration</option>
             </select>
             <span class="form-line"></span>
           </div>
@@ -209,10 +257,17 @@
             <span class="btn-text">Envoyer le message</span>
             <span class="btn-arrow">→</span>
           </button>
+          <p id="form-status" role="status" aria-live="polite"></p>
 
         </form>
+        <p class="contact-alternative">Ou directement par e-mail : <a href="mailto:dh.fr1109@gmail.com">dh.fr1109@gmail.com</a></p>
       </div>
     </section>
+    </main>
+    <footer class="site-footer">
+      <span><span class="footer-signature">FD.</span> François Dhont</span>
+      <a href="#cv-name">Retour en haut <span aria-hidden="true">↑</span></a>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
